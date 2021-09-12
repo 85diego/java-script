@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content ="width-device-width, initiel-scale-1">
+    <tittle>Document</tittle>
+</head>
+<body>
+    <h1>JsScript para React</h1>
+    <div id="formulario" >
+    <form>
+        <label for="">nombre </label>
+        <imput id="nombre" type="text" value ="">
+        <label for="">Nota1</label>
+        <imput type="text" value="" onkeypress ="nota1()" name="nota">
+        <label for="">Nota2</label>
+        <imput type="text" value="" onchange="nota2()">
+        <button onclick="mensaje()">Aceptar</button>
+
+    </form>
+    </div> id = "root">
+    </div>
+    </div>
+<script>
+    let n1=''
+    let n2=''
+    let mombre = ''
+    function mensaje () {
+        event.preventDefault()
+        nombre = document.getElementsByid("nombre").value
+        $root = document.getElementById("root")
+        $root.innerHTML = ` 
+        <h2>$(nombre): Notas: [$(n1),$(n2)]</h2>
+        `
+    }
+    function nota1() {
+        //console.log(event.target.name,event.target.value)
+        console.log(String.fromCharCode(event.keyCode))
+        n1 == String.fromCharCode(event.keyCode)
+    }
+    function nota2() {
+        //console.log(event.target.name,event.target.value)
+        n2= event.target.value
+    }   
+
+
+</script>
+</body>
+
+</html>
